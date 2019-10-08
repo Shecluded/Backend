@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function payWithPaystack(){
+    var handler = PaystackPop.setup({
+      key: 'pk_test_919aee1b143dc3ff408b56cd722e3157ed237799',
+      email: 'aolfiligre@gmail.com',
+      amount: 1000000,
+      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+      firstname: 'Stephen',
+      lastname: 'King',
+      subaccount: "ACCT_lu3yofyk5h7rsah",
+      // label: "Optional string that replaces customer email"
+      metadata: {
+         custom_fields: [
+            {
+                display_name: "Henry",
+                variable_name: "Henry",
+                value: "+2348012345678"
+            }
+         ]
+      },
+      callback: function(response){
+        console.log(response)
+          alert('success. transaction ref is ' + response.reference);
+      },
+      onClose: function(){
+          alert('window closed');
+      }
+    });
+    handler.openIframe();
+  }
+  </script>
+</head>
+<body>
+  <form >
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <button type="button" onclick="payWithPaystack()"> Pay </button> 
+  </form>
+</body>
+</html>

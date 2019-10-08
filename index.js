@@ -113,6 +113,8 @@ exports.SendWelcomeMail = functions.https.onCall( async(email,context) => {
        link: link
       }
     };
+
+    console.log(context);
     
     await sgMail.send(msg)
     return {success:true}
@@ -121,3 +123,162 @@ exports.SendWelcomeMail = functions.https.onCall( async(email,context) => {
     return{error}
   });
 });
+
+exports.paystack_webhook = functions.https.onRequest((req, res) => {
+
+  var hash = crypto.createHmac('sha512', process.env.PAYSTACK_SECRET).update(JSON.stringify(req.body)).digest('hex');
+  if (hash === req.headers['x-paystack-signature']) {
+      // Retrieve the request's body
+    var event = req.body;
+    // Do something with event
+    console.log(event)
+    if(event.event === 'charge.success'){
+      admin.firestore().collection("transactions").add(event)
+    .then(()=>{
+      res.send(200);
+      return {success: true}
+    })
+    .catch((err)=>{
+      return err
+    }) 
+    } else if (event.event === transfer.success){
+      admin.firestore().collection("paystack_tranfers").add(event)
+      .then(()=>{
+        res.send(200);
+        return {success: true}
+      })
+      .catch((err)=>{
+        return err
+      }) 
+
+
+    }
+  
+    
+  }
+  
+});
+
+exports.Transaction_Listener = functions.firestore.document('transactions/{docId}').onCreate(async(change,context)=>{
+
+  const email = change.data().data.customer.email;
+
+  const user = await admin.auth().getUserByEmail(email);
+
+  return change.ref.set({
+    Uid: user.uid
+  }, {merge: true});
+  
+
+});
+
+exports.List_Banks = functions.https.onCall((random)=>{
+
+  var options = { 
+    headers: { Authorization:  "Bearer " +process.env.PAYSTACK_SECRET },
+    method: 'GET',
+    uri: 'https://api.paystack.co/bank',
+    body: "",
+    json: true // Automatically stringifies the body to JSON
+
+
+
+
+  };
+ 
+  
+
+  return rp(options)
+    .then(res =>{
+      
+      return res
+    })
+    .catch(err =>{
+      console.log(err)
+      return err.error
+    })
+
+
+
+
+
+});
+
+exports.Paystack_Bvn_Verify = functions.https.onCall((data) => {
+
+  var options = { 
+    headers: { Authorization:  "Bearer " +process.env.PAYSTACK_SECRET },
+    method: 'GET',
+    uri: 'https://api.paystack.co/bank/resolve_bvn/'+data,
+    body: "",
+    json: true // Automatically stringifies the body to JSON
+
+
+
+
+  };
+ 
+  
+
+  return rp(options)
+    .then(res =>{
+      
+      return res
+    })
+    .catch(err =>{
+      // console.log(err)
+      return err.error
+    })
+
+  
+});
+
+exports.Paystack_Verify_Transaction = functions.https.onCall(async(refrence,context) => {
+
+  var options = { 
+    headers: { Authorization:  "Bearer " +process.env.PAYSTACK_SECRET },
+    method: 'GET',
+    uri: 'https://api.paystack.co/transaction/verify/'+refrence,
+    body: "",
+    json: true // Automatically stringifies the body to JSON
+
+
+
+
+  };
+  var rest = '';
+  
+
+  rest = await rp(options)
+
+    console.log(rest)
+      return db.collection('users').where("id", "==" ,context.auth.uid).get()
+      
+      
+      // .doc("EcdBcunse9Upgho2Tl9NVQkLbu03").collection("Finance").add(res.result.authorization)
+      // console.log(user)
+      // return user.doc("paystack_auth").set(res.result.authorization);
+    
+    .then((user)=>{
+      
+      user.forEach(async(doc) => {
+        
+       doc.ref.collection("Finance").doc("paystack_auth").set(rest.data.authorization)
+       
+        
+      });
+      
+      return {success: true}
+      
+      
+    })
+    .catch((err) =>{
+      // console.log(err)
+      return err.error
+    })
+
+  
+});
+
+
+
