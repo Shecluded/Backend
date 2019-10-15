@@ -94,9 +94,13 @@ exports.SendWelcomeMail = functions.https.onCall( async(email,context) => {
   const actionCodeSettings = {
     // URL you want to redirect back to. The domain (www.example.com) for
     // this URL must be whitelisted in the Firebase Console.
-    url: 'https://shecluded.web.app/',
+    url: 'https://shecluded.firebaseapp.com/welcome',
     
   };
+
+  const user = await admin.auth().getUser(context.auth.uid)
+
+  user.displayName
 
  
  return admin.auth().generateEmailVerificationLink(context.auth.token.email, actionCodeSettings)
@@ -108,13 +112,13 @@ exports.SendWelcomeMail = functions.https.onCall( async(email,context) => {
       templateId: 'd-b626671df4f34d34b5316000ec89720c',
       dynamic_template_data: {
        subject: 'Testing Templates',
-       firstname: context.auth.token.name,
+       firstname: user.displayName,
       //  name: context.auth.token.name,
        link: link
       }
     };
 
-    console.log(context);
+    console.log(context.auth);
     
     await sgMail.send(msg)
     return {success:true}
@@ -252,7 +256,7 @@ exports.Paystack_Verify_Transaction = functions.https.onCall(async(refrence,cont
   rest = await rp(options)
 
     console.log(rest)
-      return db.collection('users').where("id", "==" ,context.auth.uid).get()
+      return db.collection('users').where("userID", "==" ,context.auth.uid).get()
       
       
       // .doc("EcdBcunse9Upgho2Tl9NVQkLbu03").collection("Finance").add(res.result.authorization)
@@ -263,7 +267,7 @@ exports.Paystack_Verify_Transaction = functions.https.onCall(async(refrence,cont
       
       user.forEach(async(doc) => {
         
-       doc.ref.collection("Finance").doc("paystack_auth").set(rest.data.authorization)
+       doc.ref.collection("finance").doc("paystack_auth").set(rest.data.authorization)
        
         
       });
@@ -280,5 +284,119 @@ exports.Paystack_Verify_Transaction = functions.https.onCall(async(refrence,cont
   
 });
 
+exports.Create_Recipient = functions.https.onCall(async(user, context) => {
+
+  var options = { 
+    headers: { Authorization:  "Bearer " +process.env.PAYSTACK_SECRET },
+    method: 'POST',
+    uri: 'https://api.paystack.co/transferrecipient',
+    body:{
+      type: "nuban",
+      name: '',
+      account_number: "",
+      bank_code: ""
+    },
+    json: true // Automatically stringifies the body to JSON
+
+
+
+
+  };
+  var docID
+  const userDoc = await db.collection("users").where("userID", "==","W8MF2nhe23Qc4FKAmH6QGOrwOCi1").get()
+
+  userDoc.forEach(async(doc) =>{
+    console.log("we got here")
+
+   docID = doc.id
+  
+   options.body.name = doc.data().firstName
+  })
+
+  const bank = await db.collection("users").doc(docID).collection("finance").doc("bank_details").get()
+
+  console.log(bank.data())
+   options.body.account_number =    bank.data().accountNumber
+    options.body.bank_code = bank.data().bankCode
+    console.log(bank)
+   console.log(options.body)
+
+  return rp(options)
+  .then((res)=>{
+    return res
+  })
+  .catch((err)=>{
+    return err.error
+  })
+  
+
+
+})
+
+exports.Calculate_Loan = functions.https.onCall((loan) => {
+  let p = loan.loanAmount;
+  // const r = 0.03;
+  const n = loan.loanDuration;
+
+  if(loan.loanTerm === "monthly"){
+    var r = 0.03
+  } else if (loan.loanTerm === "weekly"){
+    // eslint-disable-next-line no-redeclare
+    var r = 0.08
+  }
+
+ 
+
+
+
+  let amort = p/((((1+r)**n)-1)/((r*(1+r)**n)));
+  var 
+  TotalCapital = 0,
+  TotalInterest = 0 ,
+  TotalRepayment = 0 
+
+  
+  let capitalPayment = 0;
+  var i;
+  let paymentSchedule = []
+  for(i = 0; i <n; i++){
+    
+    let interest = p*r;
+    capitalPayment = amort - interest;
+
+    let payment = {
+      capital: Math.round(capitalPayment * 100) / 100,
+      interest: Math.round(interest * 100) / 100,
+      repayment:Math.round(amort * 100) / 100,
+    }
+    TotalCapital += payment.capital
+    TotalInterest += payment.interest
+    TotalRepayment += payment.repayment
+    
+  
+    
+    paymentSchedule.push(payment)
+
+    p -= capitalPayment
+  }
+
+  let result = {
+    TotalCapital: Math.round(TotalCapital * 100) / 100,
+    TotalInterest: Math.round(TotalInterest * 100) / 100,
+    TotalRepayment: Math.round(TotalRepayment * 100) / 100,
+    PaymentSchedule: paymentSchedule
+  }
+  
+
+    // console.log(total.TotalCapital)
+  
+  
+  
+
+  return result
+
+
+
+})
 
 
