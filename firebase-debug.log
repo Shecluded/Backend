@@ -1,0 +1,1565 @@
+[debug] [2019-10-18T11:06:18.333Z] ----------------------------------------------------------------------
+[debug] [2019-10-18T11:06:18.336Z] Command:       /usr/local/bin/node /Users/mac/.npm-global/bin/firebase functions:shell
+[debug] [2019-10-18T11:06:18.336Z] CLI Version:   7.4.0
+[debug] [2019-10-18T11:06:18.336Z] Platform:      darwin
+[debug] [2019-10-18T11:06:18.336Z] Node Version:  v10.16.3
+[debug] [2019-10-18T11:06:18.337Z] Time:          Fri Oct 18 2019 12:06:18 GMT+0100 (West Africa Standard Time)
+[debug] [2019-10-18T11:06:18.337Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-10-18T11:06:18.345Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-18T11:06:18.346Z] > authorizing via signed-in user
+[debug] [2019-10-18T11:06:18.346Z] [iam] checking project shecluded for permissions ["firebase.projects.get"]
+[debug] [2019-10-18T11:06:18.348Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/shecluded:testIamPermissions  
+
+[debug] [2019-10-18T11:06:20.068Z] <<< HTTP RESPONSE 200
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "10"
+[info] ✔  functions: Emulator started at http://localhost:5000
+[debug] [2019-10-18T11:06:20.347Z] [functions] Watching "/Users/mac/Documents/code/Shecluded/cloud-functions/functions" for Cloud Functions...
+[debug] [2019-10-18T11:06:20.636Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T11:06:20.636Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T11:06:20.640Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T11:06:20.641Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T11:06:20.641Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T11:06:21.017Z] DEBUG: Unsupported trigger: {"schedule":{"schedule":"0 11 * * *"},"eventTrigger":{"resource":"projects/shecluded/topics","eventType":"google.pubsub.topic.publish","service":"pubsub.googleapis.com"},"labels":{"deployment-scheduled":"true"},"name":"Payment_Collector","entryPoint":"Payment_Collector"}
+[debug] [2019-10-18T11:06:21.017Z] [functions[helloWorld]] http function initialized (http://localhost:5000/shecluded/us-central1/helloWorld).
+[debug] [2019-10-18T11:06:21.017Z] [functions[SendPhoneAuth]] http function initialized (http://localhost:5000/shecluded/us-central1/SendPhoneAuth).
+[debug] [2019-10-18T11:06:21.017Z] [functions[PhoneAuthVerify]] http function initialized (http://localhost:5000/shecluded/us-central1/PhoneAuthVerify).
+[debug] [2019-10-18T11:06:21.017Z] [functions[SendWelcomeMail]] http function initialized (http://localhost:5000/shecluded/us-central1/SendWelcomeMail).
+[debug] [2019-10-18T11:06:21.017Z] [functions[paystack_webhook]] http function initialized (http://localhost:5000/shecluded/us-central1/paystack_webhook).
+[debug] [2019-10-18T11:06:21.017Z] [functions[List_Banks]] http function initialized (http://localhost:5000/shecluded/us-central1/List_Banks).
+[debug] [2019-10-18T11:06:21.017Z] [functions[Paystack_Bvn_Verify]] http function initialized (http://localhost:5000/shecluded/us-central1/Paystack_Bvn_Verify).
+[debug] [2019-10-18T11:06:21.018Z] [functions[Paystack_Verify_Transaction]] http function initialized (http://localhost:5000/shecluded/us-central1/Paystack_Verify_Transaction).
+[debug] [2019-10-18T11:06:21.018Z] [functions[Create_Recipient]] http function initialized (http://localhost:5000/shecluded/us-central1/Create_Recipient).
+[debug] [2019-10-18T11:06:21.018Z] [functions[Calculate_Loan]] http function initialized (http://localhost:5000/shecluded/us-central1/Calculate_Loan).
+[debug] [2019-10-18T11:06:21.018Z] [functions[Loan_Approve]] http function initialized (http://localhost:5000/shecluded/us-central1/Loan_Approve).
+[debug] [2019-10-18T11:06:21.018Z] [functions[Paystack_Approve_transfer]] http function initialized (http://localhost:5000/shecluded/us-central1/Paystack_Approve_transfer).
+[debug] [2019-10-18T11:06:21.018Z] [functions[Paystack_Resend_OTP]] http function initialized (http://localhost:5000/shecluded/us-central1/Paystack_Resend_OTP).
+[debug] [2019-10-18T11:06:21.018Z] [functions[Payment_Confirmer]] http function initialized (http://localhost:5000/shecluded/us-central1/Payment_Confirmer).
+[debug] [2019-10-18T11:06:21.018Z] [functions[Transaction_Listener]] function ignored because the firestore emulator does not exist or is not running.
+[debug] [2019-10-18T11:06:21.018Z] [functions[Payment_Collector]] function ignored because the pubsub.googleapis.com emulator does not exist or is not running.
+[info] i  functions: Loaded functions: helloWorld, SendPhoneAuth, PhoneAuthVerify, SendWelcomeMail, paystack_webhook, Transaction_Listener, List_Banks, Paystack_Bvn_Verify, Paystack_Verify_Transaction, Create_Recipient, Calculate_Loan, Loan_Approve, Paystack_Approve_transfer, Paystack_Resend_OTP, Payment_Collector, Payment_Confirmer
+[debug] [2019-10-18T11:07:20.602Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T11:07:21.880Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T11:07:21.881Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T11:07:21.883Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T11:07:21.884Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T11:07:21.885Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T11:08:26.120Z] Accepted request POST /shecluded/us-central1/Loan_Approve --> Loan_Approve
+[debug] [2019-10-18T11:08:26.380Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T11:08:26.381Z] [functions] Beginning execution of "Loan_Approve"
+[debug] [2019-10-18T11:08:26.381Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T11:08:26.383Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T11:08:26.384Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T11:08:26.385Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T11:08:26.746Z] DEBUG: [runtime-status] Trigger "Loan_Approve" has been found, beginning invocation! {}
+[debug] [2019-10-18T11:08:26.746Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Loan_Approve","entryPoint":"Loan_Approve"}
+[debug] [2019-10-18T11:08:26.746Z] DEBUG: [runtime-status] Running Loan_Approve in mode HTTPS {}
+[debug] [2019-10-18T11:08:26.753Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_15412.sock"}
+[debug] [2019-10-18T11:08:26.756Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_15412.sock"}
+[debug] [2019-10-18T11:08:26.787Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T11:08:27.120Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  { bank: 'Zenith Bank',
+[info] >    accountNumber: '2111593918',
+[info] >    bankCode: '057' }
+[info] >  undefined
+[info] >  Unhandled error { StatusCodeError: 400 - {"status":false,"message":"Recipient specified is invalid"}
+[info] >      at new StatusCodeError (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/request-promise-core/lib/errors.js:32:15)
+[info] >      at Request.plumbing.callback (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/request-promise-core/lib/plumbing.js:104:33)
+[info] >      at Request.RP$callback [as _callback] (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/request-promise-core/lib/plumbing.js:46:31)
+[info] >      at Request.self.callback (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/request/request.js:185:22)
+[info] >      at Request.emit (events.js:198:13)
+[info] >      at Request.<anonymous> (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/request/request.js:1161:10)
+[info] >      at Request.emit (events.js:198:13)
+[info] >      at IncomingMessage.<anonymous> (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/request/request.js:1083:12)
+[info] >      at Object.onceWrapper (events.js:286:20)
+[info] >      at IncomingMessage.emit (events.js:203:15)
+[info] >      at endReadableNT (_stream_readable.js:1145:12)
+[info] >      at process._tickCallback (internal/process/next_tick.js:63:19)
+[info] >    name: 'StatusCodeError',
+[info] >    statusCode: 400,
+[info] >    message:
+[info] >     '400 - {"status":false,"message":"Recipient specified is invalid"}',
+[info] >    error: { status: false, message: 'Recipient specified is invalid' },
+[info] >    options:
+[info] >     { headers:
+[info] >        { Authorization: 'Bearer sk_test_29bd1d861ff57eaf2f1c82fff57df74210eaa4be' },
+[info] >       method: 'POST',
+[info] >       uri: 'https://api.paystack.co/transfer',
+[info] >       body:
+[info] >        { source: 'balance', amount: '900000', recipient: undefined },
+[info] >       json: true,
+[info] >       callback: [Function: RP$callback],
+[info] >       transform: undefined,
+[info] >       simple: true,
+[info] >       resolveWithFullResponse: false,
+[info] >       transform2xxOnly: false },
+[info] >    response:
+[info] >     IncomingMessage {
+[info] >       _readableState:
+[info] >        ReadableState {
+[info] >          objectMode: false,
+[info] >          highWaterMark: 16384,
+[info] >          buffer: BufferList { head: null, tail: null, length: 0 },
+[info] >          length: 0,
+[info] >          pipes: null,
+[info] >          pipesCount: 0,
+[info] >          flowing: true,
+[info] >          ended: true,
+[info] >          endEmitted: true,
+[info] >          reading: false,
+[info] >          sync: true,
+[info] >          needReadable: false,
+[info] >          emittedReadable: false,
+[info] >          readableListening: false,
+[info] >          resumeScheduled: false,
+[info] >          paused: false,
+[info] >          emitClose: true,
+[info] >          autoDestroy: false,
+[info] >          destroyed: false,
+[info] >          defaultEncoding: 'utf8',
+[info] >          awaitDrain: 0,
+[info] >          readingMore: true,
+[info] >          decoder: null,
+[info] >          encoding: null },
+[info] >       readable: false,
+[info] >       _events:
+[info] >        [Object: null prototype] {
+[info] >          end: [Array],
+[info] >          close: [Array],
+[info] >          data: [Function],
+[info] >          error: [Function] },
+[info] >       _eventsCount: 4,
+[info] >       _maxListeners: undefined,
+[info] >       socket:
+[info] >        TLSSocket {
+[info] >          _tlsOptions: [Object],
+[info] >          _secureEstablished: true,
+[info] >          _securePending: false,
+[info] >          _newSessionPending: false,
+[info] >          _controlReleased: true,
+[info] >          _SNICallback: null,
+[info] >          servername: 'api.paystack.co',
+[info] >          alpnProtocol: false,
+[info] >          authorized: true,
+[info] >          authorizationError: null,
+[info] >          encrypted: true,
+[info] >          _events: [Object],
+[info] >          _eventsCount: 8,
+[info] >          connecting: false,
+[info] >          _hadError: false,
+[info] >          _handle: [TLSWrap],
+[info] >          _parent: null,
+[info] >          _host: 'api.paystack.co',
+[info] >          _readableState: [ReadableState],
+[info] >          readable: true,
+[info] >          _maxListeners: undefined,
+[info] >          _writableState: [WritableState],
+[info] >          writable: false,
+[info] >          allowHalfOpen: false,
+[info] >          _sockname: null,
+[info] >          _pendingData: null,
+[info] >          _pendingEncoding: '',
+[info] >          server: undefined,
+[info] >          _server: null,
+[info] >          ssl: [TLSWrap],
+[info] >          _requestCert: true,
+[info] >          _rejectUnauthorized: true,
+[info] >          parser: null,
+[info] >          _httpMessage: [ClientRequest],
+[info] >          [Symbol(res)]: [TLSWrap],
+[info] >          [Symbol(asyncId)]: 307,
+[info] >          [Symbol(lastWriteQueueSize)]: 0,
+[info] >          [Symbol(timeout)]: null,
+[info] >          [Symbol(kBytesRead)]: 0,
+[info] >          [Symbol(kBytesWritten)]: 0,
+[info] >          [Symbol(connect-options)]: [Object] },
+[info] >       connection:
+[info] >        TLSSocket {
+[info] >          _tlsOptions: [Object],
+[info] >          _secureEstablished: true,
+[info] >          _securePending: false,
+[info] >          _newSessionPending: false,
+[info] >          _controlReleased: true,
+[info] >          _SNICallback: null,
+[info] >          servername: 'api.paystack.co',
+[info] >          alpnProtocol: false,
+[info] >          authorized: true,
+[info] >          authorizationError: null,
+[info] >          encrypted: true,
+[info] >          _events: [Object],
+[info] >          _eventsCount: 8,
+[info] >          connecting: false,
+[info] >          _hadError: false,
+[info] >          _handle: [TLSWrap],
+[info] >          _parent: null,
+[info] >          _host: 'api.paystack.co',
+[info] >          _readableState: [ReadableState],
+[info] >          readable: true,
+[info] >          _maxListeners: undefined,
+[info] >          _writableState: [WritableState],
+[info] >          writable: false,
+[info] >          allowHalfOpen: false,
+[info] >          _sockname: null,
+[info] >          _pendingData: null,
+[info] >          _pendingEncoding: '',
+[info] >          server: undefined,
+[info] >          _server: null,
+[info] >          ssl: [TLSWrap],
+[info] >          _requestCert: true,
+[info] >          _rejectUnauthorized: true,
+[info] >          parser: null,
+[info] >          _httpMessage: [ClientRequest],
+[info] >          [Symbol(res)]: [TLSWrap],
+[info] >          [Symbol(asyncId)]: 307,
+[info] >          [Symbol(lastWriteQueueSize)]: 0,
+[info] >          [Symbol(timeout)]: null,
+[info] >          [Symbol(kBytesRead)]: 0,
+[info] >          [Symbol(kBytesWritten)]: 0,
+[info] >          [Symbol(connect-options)]: [Object] },
+[info] >       httpVersionMajor: 1,
+[info] >       httpVersionMinor: 1,
+[info] >       httpVersion: '1.1',
+[info] >       complete: true,
+[info] >       headers:
+[info] >        { date: 'Fri, 18 Oct 2019 11:08:33 GMT',
+[info] >          'content-type': 'application/json; charset=utf-8',
+[info] >          'content-length': '68',
+[info] >          connection: 'close',
+[info] >          'set-cookie': [Array],
+[info] >          'access-control-allow-origin': '*',
+[info] >          etag: 'W/"44-P13wTj55GN6f7M5qjJzFZw"',
+[info] >          vary: 'X-HTTP-Method-Override',
+[info] >          'x-powered-by': 'Sails <sailsjs.org>',
+[info] >          'cf-cache-status': 'DYNAMIC',
+[info] >          'strict-transport-security': 'max-age=15552000; includeSubDomains; preload',
+[info] >          'x-content-type-options': 'nosniff',
+[info] >          'expect-ct':
+[info] >           'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+[info] >          server: 'cloudflare',
+[info] >          'cf-ray': '527a0e125af9e664-LHR' },
+[info] >       rawHeaders:
+[info] >        [ 'Date',
+[info] >          'Fri, 18 Oct 2019 11:08:33 GMT',
+[info] >          'Content-Type',
+[info] >          'application/json; charset=utf-8',
+[info] >          'Content-Length',
+[info] >          '68',
+[info] >          'Connection',
+[info] >          'close',
+[info] >          'Set-Cookie',
+[info] >          '__cfduid=d0770164d7c4016c27581f3ab3f119d901571396913; expires=Sat, 17-Oct-20 11:08:33 GMT; path=/; domain=.paystack.co; HttpOnly; Secure',
+[info] >          'Access-Control-Allow-Origin',
+[info] >          '*',
+[info] >          'ETag',
+[info] >          'W/"44-P13wTj55GN6f7M5qjJzFZw"',
+[info] >          'set-cookie',
+[info] >          'sails.sid=s%3ArhdZ4FjeOOFCkYBMSg8oTdr_bHaE395g.6pz70XBYv7lTwHNRPQ6pxDzHU66BmHpn7f7TlWOFfG0; Path=/; HttpOnly; Secure',
+[info] >          'Vary',
+[info] >          'X-HTTP-Method-Override',
+[info] >          'X-Powered-By',
+[info] >          'Sails <sailsjs.org>',
+[info] >          'CF-Cache-Status',
+[info] >          'DYNAMIC',
+[info] >          'Strict-Transport-Security',
+[info] >          'max-age=15552000; includeSubDomains; preload',
+[info] >          'X-Content-Type-Options',
+[info] >          'nosniff',
+[info] >          'Expect-CT',
+[info] >          'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+[info] >          'Server',
+[info] >          'cloudflare',
+[info] >          'CF-RAY',
+[info] >          '527a0e125af9e664-LHR' ],
+[info] >       trailers: {},
+[info] >       rawTrailers: [],
+[info] >       aborted: false,
+[info] >       upgrade: false,
+[info] >       url: '',
+[info] >       method: null,
+[info] >       statusCode: 400,
+[info] >       statusMessage: 'Bad Request',
+[info] >       client:
+[info] >        TLSSocket {
+[info] >          _tlsOptions: [Object],
+[info] >          _secureEstablished: true,
+[info] >          _securePending: false,
+[info] >          _newSessionPending: false,
+[info] >          _controlReleased: true,
+[info] >          _SNICallback: null,
+[info] >          servername: 'api.paystack.co',
+[info] >          alpnProtocol: false,
+[info] >          authorized: true,
+[info] >          authorizationError: null,
+[info] >          encrypted: true,
+[info] >          _events: [Object],
+[info] >          _eventsCount: 8,
+[info] >          connecting: false,
+[info] >          _hadError: false,
+[info] >          _handle: [TLSWrap],
+[info] >          _parent: null,
+[info] >          _host: 'api.paystack.co',
+[info] >          _readableState: [ReadableState],
+[info] >          readable: true,
+[info] >          _maxListeners: undefined,
+[info] >          _writableState: [WritableState],
+[info] >          writable: false,
+[info] >          allowHalfOpen: false,
+[info] >          _sockname: null,
+[info] >          _pendingData: null,
+[info] >          _pendingEncoding: '',
+[info] >          server: undefined,
+[info] >          _server: null,
+[info] >          ssl: [TLSWrap],
+[info] >          _requestCert: true,
+[info] >          _rejectUnauthorized: true,
+[info] >          parser: null,
+[info] >          _httpMessage: [ClientRequest],
+[info] >          [Symbol(res)]: [TLSWrap],
+[info] >          [Symbol(asyncId)]: 307,
+[info] >          [Symbol(lastWriteQueueSize)]: 0,
+[info] >          [Symbol(timeout)]: null,
+[info] >          [Symbol(kBytesRead)]: 0,
+[info] >          [Symbol(kBytesWritten)]: 0,
+[info] >          [Symbol(connect-options)]: [Object] },
+[info] >       _consuming: false,
+[info] >       _dumped: false,
+[info] >       req:
+[info] >        ClientRequest {
+[info] >          _events: [Object],
+[info] >          _eventsCount: 5,
+[info] >          _maxListeners: undefined,
+[info] >          output: [],
+[info] >          outputEncodings: [],
+[info] >          outputCallbacks: [],
+[info] >          outputSize: 0,
+[info] >          writable: true,
+[info] >          _last: true,
+[info] >          chunkedEncoding: false,
+[info] >          shouldKeepAlive: false,
+[info] >          useChunkedEncodingByDefault: true,
+[info] >          sendDate: false,
+[info] >          _removedConnection: false,
+[info] >          _removedContLen: false,
+[info] >          _removedTE: false,
+[info] >          _contentLength: null,
+[info] >          _hasBody: true,
+[info] >          _trailer: '',
+[info] >          finished: true,
+[info] >          _headerSent: true,
+[info] >          socket: [TLSSocket],
+[info] >          connection: [TLSSocket],
+[info] >          _header:
+[info] >           'POST /transfer HTTP/1.1\r\nAuthorization: Bearer sk_test_29bd1d861ff57eaf2f1c82fff57df74210eaa4be\r\nhost: api.paystack.co\r\naccept: application/json\r\ncontent-type: application/json\r\ncontent-length: 38\r\nConnection: close\r\n\r\n',
+[info] >          _onPendingData: [Function: noopPendingOutput],
+[info] >          agent: [Agent],
+[info] >          socketPath: undefined,
+[info] >          timeout: undefined,
+[info] >          method: 'POST',
+[info] >          path: '/transfer',
+[info] >          _ended: true,
+[info] >          res: [Circular],
+[info] >          aborted: undefined,
+[info] >          timeoutCb: null,
+[info] >          upgradeOrConnect: false,
+[info] >          parser: null,
+[info] >          maxHeadersCount: null,
+[info] >          [Symbol(isCorked)]: false,
+[info] >          [Symbol(outHeadersKey)]: [Object] },
+[info] >       request:
+[info] >        Request {
+[info] >          _events: [Object],
+[info] >          _eventsCount: 5,
+[info] >          _maxListeners: undefined,
+[info] >          headers: [Object],
+[info] >          method: 'POST',
+[info] >          uri: [Url],
+[info] >          body: '{"source":"balance","amount":"900000"}',
+[info] >          readable: true,
+[info] >          writable: true,
+[info] >          explicitMethod: true,
+[info] >          _qs: [Querystring],
+[info] >          _auth: [Auth],
+[info] >          _oauth: [OAuth],
+[info] >          _multipart: [Multipart],
+[info] >          _redirect: [Redirect],
+[info] >          _tunnel: [Tunnel],
+[info] >          _rp_resolve: [Function],
+[info] >          _rp_reject: [Function],
+[info] >          _rp_promise: [Promise],
+[info] >          _rp_callbackOrig: undefined,
+[info] >          callback: [Function],
+[info] >          _rp_options: [Object],
+[info] >          setHeader: [Function],
+[info] >          hasHeader: [Function],
+[info] >          getHeader: [Function],
+[info] >          removeHeader: [Function],
+[info] >          localAddress: undefined,
+[info] >          pool: {},
+[info] >          dests: [],
+[info] >          __isRequestRequest: true,
+[info] >          _callback: [Function: RP$callback],
+[info] >          proxy: null,
+[info] >          tunnel: true,
+[info] >          setHost: true,
+[info] >          originalCookieHeader: undefined,
+[info] >          _disableCookies: true,
+[info] >          _jar: undefined,
+[info] >          port: 443,
+[info] >          host: 'api.paystack.co',
+[info] >          path: '/transfer',
+[info] >          _json: true,
+[info] >          httpModule: [Object],
+[info] >          agentClass: [Function],
+[info] >          agent: [Agent],
+[info] >          _started: true,
+[info] >          href: 'https://api.paystack.co/transfer',
+[info] >          req: [ClientRequest],
+[info] >          ntick: true,
+[info] >          response: [Circular],
+[info] >          originalHost: 'api.paystack.co',
+[info] >          originalHostHeaderName: 'host',
+[info] >          responseContent: [Circular],
+[info] >          _destdata: true,
+[info] >          _ended: true,
+[info] >          _callbackCalled: true },
+[info] >       toJSON: [Function: responseToJSON],
+[info] >       caseless: Caseless { dict: [Object] },
+[info] >       body: { status: false, message: 'Recipient specified is invalid' } } }
+[debug] [2019-10-18T11:08:33.130Z] [functions] Finished "Loan_Approve" in ~6s
+[debug] [2019-10-18T11:09:50.151Z] Accepted request POST /shecluded/us-central1/Loan_Approve --> Loan_Approve
+[debug] [2019-10-18T11:09:50.415Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T11:09:50.415Z] [functions] Beginning execution of "Loan_Approve"
+[debug] [2019-10-18T11:09:50.416Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T11:09:50.418Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T11:09:50.419Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T11:09:50.420Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T11:09:50.784Z] DEBUG: [runtime-status] Trigger "Loan_Approve" has been found, beginning invocation! {}
+[debug] [2019-10-18T11:09:50.785Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Loan_Approve","entryPoint":"Loan_Approve"}
+[debug] [2019-10-18T11:09:50.785Z] DEBUG: [runtime-status] Running Loan_Approve in mode HTTPS {}
+[debug] [2019-10-18T11:09:50.791Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_15421.sock"}
+[debug] [2019-10-18T11:09:50.792Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_15421.sock"}
+[debug] [2019-10-18T11:09:50.806Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T11:09:51.042Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  { accountNumber: '0049562599',
+[info] >    bankCode: '063',
+[info] >    bank: 'Access Bank (Diamond)' }
+[info] >  undefined
+[info] >  Unhandled error { StatusCodeError: 400 - {"status":false,"message":"Recipient specified is invalid"}
+[info] >      at new StatusCodeError (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/request-promise-core/lib/errors.js:32:15)
+[info] >      at Request.plumbing.callback (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/request-promise-core/lib/plumbing.js:104:33)
+[info] >      at Request.RP$callback [as _callback] (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/request-promise-core/lib/plumbing.js:46:31)
+[info] >      at Request.self.callback (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/request/request.js:185:22)
+[info] >      at Request.emit (events.js:198:13)
+[info] >      at Request.<anonymous> (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/request/request.js:1161:10)
+[info] >      at Request.emit (events.js:198:13)
+[info] >      at IncomingMessage.<anonymous> (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/request/request.js:1083:12)
+[info] >      at Object.onceWrapper (events.js:286:20)
+[info] >      at IncomingMessage.emit (events.js:203:15)
+[info] >      at endReadableNT (_stream_readable.js:1145:12)
+[info] >      at process._tickCallback (internal/process/next_tick.js:63:19)
+[info] >    name: 'StatusCodeError',
+[info] >    statusCode: 400,
+[info] >    message:
+[info] >     '400 - {"status":false,"message":"Recipient specified is invalid"}',
+[info] >    error: { status: false, message: 'Recipient specified is invalid' },
+[info] >    options:
+[info] >     { headers:
+[info] >        { Authorization: 'Bearer sk_test_29bd1d861ff57eaf2f1c82fff57df74210eaa4be' },
+[info] >       method: 'POST',
+[info] >       uri: 'https://api.paystack.co/transfer',
+[info] >       body:
+[info] >        { source: 'balance', amount: '100000', recipient: undefined },
+[info] >       json: true,
+[info] >       callback: [Function: RP$callback],
+[info] >       transform: undefined,
+[info] >       simple: true,
+[info] >       resolveWithFullResponse: false,
+[info] >       transform2xxOnly: false },
+[info] >    response:
+[info] >     IncomingMessage {
+[info] >       _readableState:
+[info] >        ReadableState {
+[info] >          objectMode: false,
+[info] >          highWaterMark: 16384,
+[info] >          buffer: BufferList { head: null, tail: null, length: 0 },
+[info] >          length: 0,
+[info] >          pipes: null,
+[info] >          pipesCount: 0,
+[info] >          flowing: true,
+[info] >          ended: true,
+[info] >          endEmitted: true,
+[info] >          reading: false,
+[info] >          sync: true,
+[info] >          needReadable: false,
+[info] >          emittedReadable: false,
+[info] >          readableListening: false,
+[info] >          resumeScheduled: false,
+[info] >          paused: false,
+[info] >          emitClose: true,
+[info] >          autoDestroy: false,
+[info] >          destroyed: false,
+[info] >          defaultEncoding: 'utf8',
+[info] >          awaitDrain: 0,
+[info] >          readingMore: true,
+[info] >          decoder: null,
+[info] >          encoding: null },
+[info] >       readable: false,
+[info] >       _events:
+[info] >        [Object: null prototype] {
+[info] >          end: [Array],
+[info] >          close: [Array],
+[info] >          data: [Function],
+[info] >          error: [Function] },
+[info] >       _eventsCount: 4,
+[info] >       _maxListeners: undefined,
+[info] >       socket:
+[info] >        TLSSocket {
+[info] >          _tlsOptions: [Object],
+[info] >          _secureEstablished: true,
+[info] >          _securePending: false,
+[info] >          _newSessionPending: false,
+[info] >          _controlReleased: true,
+[info] >          _SNICallback: null,
+[info] >          servername: 'api.paystack.co',
+[info] >          alpnProtocol: false,
+[info] >          authorized: true,
+[info] >          authorizationError: null,
+[info] >          encrypted: true,
+[info] >          _events: [Object],
+[info] >          _eventsCount: 8,
+[info] >          connecting: false,
+[info] >          _hadError: false,
+[info] >          _handle: [TLSWrap],
+[info] >          _parent: null,
+[info] >          _host: 'api.paystack.co',
+[info] >          _readableState: [ReadableState],
+[info] >          readable: true,
+[info] >          _maxListeners: undefined,
+[info] >          _writableState: [WritableState],
+[info] >          writable: false,
+[info] >          allowHalfOpen: false,
+[info] >          _sockname: null,
+[info] >          _pendingData: null,
+[info] >          _pendingEncoding: '',
+[info] >          server: undefined,
+[info] >          _server: null,
+[info] >          ssl: [TLSWrap],
+[info] >          _requestCert: true,
+[info] >          _rejectUnauthorized: true,
+[info] >          parser: null,
+[info] >          _httpMessage: [ClientRequest],
+[info] >          [Symbol(res)]: [TLSWrap],
+[info] >          [Symbol(asyncId)]: 291,
+[info] >          [Symbol(lastWriteQueueSize)]: 0,
+[info] >          [Symbol(timeout)]: null,
+[info] >          [Symbol(kBytesRead)]: 0,
+[info] >          [Symbol(kBytesWritten)]: 0,
+[info] >          [Symbol(connect-options)]: [Object] },
+[info] >       connection:
+[info] >        TLSSocket {
+[info] >          _tlsOptions: [Object],
+[info] >          _secureEstablished: true,
+[info] >          _securePending: false,
+[info] >          _newSessionPending: false,
+[info] >          _controlReleased: true,
+[info] >          _SNICallback: null,
+[info] >          servername: 'api.paystack.co',
+[info] >          alpnProtocol: false,
+[info] >          authorized: true,
+[info] >          authorizationError: null,
+[info] >          encrypted: true,
+[info] >          _events: [Object],
+[info] >          _eventsCount: 8,
+[info] >          connecting: false,
+[info] >          _hadError: false,
+[info] >          _handle: [TLSWrap],
+[info] >          _parent: null,
+[info] >          _host: 'api.paystack.co',
+[info] >          _readableState: [ReadableState],
+[info] >          readable: true,
+[info] >          _maxListeners: undefined,
+[info] >          _writableState: [WritableState],
+[info] >          writable: false,
+[info] >          allowHalfOpen: false,
+[info] >          _sockname: null,
+[info] >          _pendingData: null,
+[info] >          _pendingEncoding: '',
+[info] >          server: undefined,
+[info] >          _server: null,
+[info] >          ssl: [TLSWrap],
+[info] >          _requestCert: true,
+[info] >          _rejectUnauthorized: true,
+[info] >          parser: null,
+[info] >          _httpMessage: [ClientRequest],
+[info] >          [Symbol(res)]: [TLSWrap],
+[info] >          [Symbol(asyncId)]: 291,
+[info] >          [Symbol(lastWriteQueueSize)]: 0,
+[info] >          [Symbol(timeout)]: null,
+[info] >          [Symbol(kBytesRead)]: 0,
+[info] >          [Symbol(kBytesWritten)]: 0,
+[info] >          [Symbol(connect-options)]: [Object] },
+[info] >       httpVersionMajor: 1,
+[info] >       httpVersionMinor: 1,
+[info] >       httpVersion: '1.1',
+[info] >       complete: true,
+[info] >       headers:
+[info] >        { date: 'Fri, 18 Oct 2019 11:09:55 GMT',
+[info] >          'content-type': 'application/json; charset=utf-8',
+[info] >          'content-length': '68',
+[info] >          connection: 'close',
+[info] >          'set-cookie': [Array],
+[info] >          'access-control-allow-origin': '*',
+[info] >          etag: 'W/"44-P13wTj55GN6f7M5qjJzFZw"',
+[info] >          vary: 'X-HTTP-Method-Override',
+[info] >          'x-powered-by': 'Sails <sailsjs.org>',
+[info] >          'cf-cache-status': 'DYNAMIC',
+[info] >          'strict-transport-security': 'max-age=15552000; includeSubDomains; preload',
+[info] >          'x-content-type-options': 'nosniff',
+[info] >          'expect-ct':
+[info] >           'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+[info] >          server: 'cloudflare',
+[info] >          'cf-ray': '527a10127a66e674-LHR' },
+[info] >       rawHeaders:
+[info] >        [ 'Date',
+[info] >          'Fri, 18 Oct 2019 11:09:55 GMT',
+[info] >          'Content-Type',
+[info] >          'application/json; charset=utf-8',
+[info] >          'Content-Length',
+[info] >          '68',
+[info] >          'Connection',
+[info] >          'close',
+[info] >          'Set-Cookie',
+[info] >          '__cfduid=d64e4a97055030a3e681a5fc648b711d91571396994; expires=Sat, 17-Oct-20 11:09:54 GMT; path=/; domain=.paystack.co; HttpOnly; Secure',
+[info] >          'Access-Control-Allow-Origin',
+[info] >          '*',
+[info] >          'ETag',
+[info] >          'W/"44-P13wTj55GN6f7M5qjJzFZw"',
+[info] >          'set-cookie',
+[info] >          'sails.sid=s%3AcIb-bfqutbLZnkYofQUk0GNDdcAuIv73.je46CtZ3z%2FyfNhR%2BS4DMLWgI6NH%2Bg0XQRJMdYrnxH44; Path=/; HttpOnly; Secure',
+[info] >          'Vary',
+[info] >          'X-HTTP-Method-Override',
+[info] >          'X-Powered-By',
+[info] >          'Sails <sailsjs.org>',
+[info] >          'CF-Cache-Status',
+[info] >          'DYNAMIC',
+[info] >          'Strict-Transport-Security',
+[info] >          'max-age=15552000; includeSubDomains; preload',
+[info] >          'X-Content-Type-Options',
+[info] >          'nosniff',
+[info] >          'Expect-CT',
+[info] >          'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+[info] >          'Server',
+[info] >          'cloudflare',
+[info] >          'CF-RAY',
+[info] >          '527a10127a66e674-LHR' ],
+[info] >       trailers: {},
+[info] >       rawTrailers: [],
+[info] >       aborted: false,
+[info] >       upgrade: false,
+[info] >       url: '',
+[info] >       method: null,
+[info] >       statusCode: 400,
+[info] >       statusMessage: 'Bad Request',
+[info] >       client:
+[info] >        TLSSocket {
+[info] >          _tlsOptions: [Object],
+[info] >          _secureEstablished: true,
+[info] >          _securePending: false,
+[info] >          _newSessionPending: false,
+[info] >          _controlReleased: true,
+[info] >          _SNICallback: null,
+[info] >          servername: 'api.paystack.co',
+[info] >          alpnProtocol: false,
+[info] >          authorized: true,
+[info] >          authorizationError: null,
+[info] >          encrypted: true,
+[info] >          _events: [Object],
+[info] >          _eventsCount: 8,
+[info] >          connecting: false,
+[info] >          _hadError: false,
+[info] >          _handle: [TLSWrap],
+[info] >          _parent: null,
+[info] >          _host: 'api.paystack.co',
+[info] >          _readableState: [ReadableState],
+[info] >          readable: true,
+[info] >          _maxListeners: undefined,
+[info] >          _writableState: [WritableState],
+[info] >          writable: false,
+[info] >          allowHalfOpen: false,
+[info] >          _sockname: null,
+[info] >          _pendingData: null,
+[info] >          _pendingEncoding: '',
+[info] >          server: undefined,
+[info] >          _server: null,
+[info] >          ssl: [TLSWrap],
+[info] >          _requestCert: true,
+[info] >          _rejectUnauthorized: true,
+[info] >          parser: null,
+[info] >          _httpMessage: [ClientRequest],
+[info] >          [Symbol(res)]: [TLSWrap],
+[info] >          [Symbol(asyncId)]: 291,
+[info] >          [Symbol(lastWriteQueueSize)]: 0,
+[info] >          [Symbol(timeout)]: null,
+[info] >          [Symbol(kBytesRead)]: 0,
+[info] >          [Symbol(kBytesWritten)]: 0,
+[info] >          [Symbol(connect-options)]: [Object] },
+[info] >       _consuming: false,
+[info] >       _dumped: false,
+[info] >       req:
+[info] >        ClientRequest {
+[info] >          _events: [Object],
+[info] >          _eventsCount: 5,
+[info] >          _maxListeners: undefined,
+[info] >          output: [],
+[info] >          outputEncodings: [],
+[info] >          outputCallbacks: [],
+[info] >          outputSize: 0,
+[info] >          writable: true,
+[info] >          _last: true,
+[info] >          chunkedEncoding: false,
+[info] >          shouldKeepAlive: false,
+[info] >          useChunkedEncodingByDefault: true,
+[info] >          sendDate: false,
+[info] >          _removedConnection: false,
+[info] >          _removedContLen: false,
+[info] >          _removedTE: false,
+[info] >          _contentLength: null,
+[info] >          _hasBody: true,
+[info] >          _trailer: '',
+[info] >          finished: true,
+[info] >          _headerSent: true,
+[info] >          socket: [TLSSocket],
+[info] >          connection: [TLSSocket],
+[info] >          _header:
+[info] >           'POST /transfer HTTP/1.1\r\nAuthorization: Bearer sk_test_29bd1d861ff57eaf2f1c82fff57df74210eaa4be\r\nhost: api.paystack.co\r\naccept: application/json\r\ncontent-type: application/json\r\ncontent-length: 38\r\nConnection: close\r\n\r\n',
+[info] >          _onPendingData: [Function: noopPendingOutput],
+[info] >          agent: [Agent],
+[info] >          socketPath: undefined,
+[info] >          timeout: undefined,
+[info] >          method: 'POST',
+[info] >          path: '/transfer',
+[info] >          _ended: true,
+[info] >          res: [Circular],
+[info] >          aborted: undefined,
+[info] >          timeoutCb: null,
+[info] >          upgradeOrConnect: false,
+[info] >          parser: null,
+[info] >          maxHeadersCount: null,
+[info] >          [Symbol(isCorked)]: false,
+[info] >          [Symbol(outHeadersKey)]: [Object] },
+[info] >       request:
+[info] >        Request {
+[info] >          _events: [Object],
+[info] >          _eventsCount: 5,
+[info] >          _maxListeners: undefined,
+[info] >          headers: [Object],
+[info] >          method: 'POST',
+[info] >          uri: [Url],
+[info] >          body: '{"source":"balance","amount":"100000"}',
+[info] >          readable: true,
+[info] >          writable: true,
+[info] >          explicitMethod: true,
+[info] >          _qs: [Querystring],
+[info] >          _auth: [Auth],
+[info] >          _oauth: [OAuth],
+[info] >          _multipart: [Multipart],
+[info] >          _redirect: [Redirect],
+[info] >          _tunnel: [Tunnel],
+[info] >          _rp_resolve: [Function],
+[info] >          _rp_reject: [Function],
+[info] >          _rp_promise: [Promise],
+[info] >          _rp_callbackOrig: undefined,
+[info] >          callback: [Function],
+[info] >          _rp_options: [Object],
+[info] >          setHeader: [Function],
+[info] >          hasHeader: [Function],
+[info] >          getHeader: [Function],
+[info] >          removeHeader: [Function],
+[info] >          localAddress: undefined,
+[info] >          pool: {},
+[info] >          dests: [],
+[info] >          __isRequestRequest: true,
+[info] >          _callback: [Function: RP$callback],
+[info] >          proxy: null,
+[info] >          tunnel: true,
+[info] >          setHost: true,
+[info] >          originalCookieHeader: undefined,
+[info] >          _disableCookies: true,
+[info] >          _jar: undefined,
+[info] >          port: 443,
+[info] >          host: 'api.paystack.co',
+[info] >          path: '/transfer',
+[info] >          _json: true,
+[info] >          httpModule: [Object],
+[info] >          agentClass: [Function],
+[info] >          agent: [Agent],
+[info] >          _started: true,
+[info] >          href: 'https://api.paystack.co/transfer',
+[info] >          req: [ClientRequest],
+[info] >          ntick: true,
+[info] >          response: [Circular],
+[info] >          originalHost: 'api.paystack.co',
+[info] >          originalHostHeaderName: 'host',
+[info] >          responseContent: [Circular],
+[info] >          _destdata: true,
+[info] >          _ended: true,
+[info] >          _callbackCalled: true },
+[info] >       toJSON: [Function: responseToJSON],
+[info] >       caseless: Caseless { dict: [Object] },
+[info] >       body: { status: false, message: 'Recipient specified is invalid' } } }
+[debug] [2019-10-18T11:09:55.049Z] [functions] Finished "Loan_Approve" in ~4s
+[debug] [2019-10-18T11:30:46.470Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T11:30:47.753Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T11:30:47.753Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T11:30:47.756Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T11:30:47.757Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T11:30:47.758Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T11:31:24.216Z] Accepted request POST /shecluded/us-central1/Create_Recipient --> Create_Recipient
+[debug] [2019-10-18T11:31:24.474Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T11:31:24.474Z] [functions] Beginning execution of "Create_Recipient"
+[debug] [2019-10-18T11:31:24.475Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T11:31:24.477Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T11:31:24.478Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T11:31:24.479Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T11:31:24.838Z] DEBUG: [runtime-status] Trigger "Create_Recipient" has been found, beginning invocation! {}
+[debug] [2019-10-18T11:31:24.838Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Create_Recipient","entryPoint":"Create_Recipient"}
+[debug] [2019-10-18T11:31:24.838Z] DEBUG: [runtime-status] Running Create_Recipient in mode HTTPS {}
+[debug] [2019-10-18T11:31:24.844Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_15518.sock"}
+[debug] [2019-10-18T11:31:24.845Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_15518.sock"}
+[debug] [2019-10-18T11:31:24.860Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T11:31:25.101Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[debug] [2019-10-18T11:31:30.393Z] [functions] Finished "Create_Recipient" in ~5s
+[debug] [2019-10-18T11:34:26.907Z] Accepted request POST /shecluded/us-central1/Loan_Approve --> Loan_Approve
+[debug] [2019-10-18T11:34:27.166Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T11:34:27.166Z] [functions] Beginning execution of "Loan_Approve"
+[debug] [2019-10-18T11:34:27.166Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T11:34:27.169Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T11:34:27.170Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T11:34:27.171Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T11:34:27.536Z] DEBUG: [runtime-status] Trigger "Loan_Approve" has been found, beginning invocation! {}
+[debug] [2019-10-18T11:34:27.537Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Loan_Approve","entryPoint":"Loan_Approve"}
+[debug] [2019-10-18T11:34:27.537Z] DEBUG: [runtime-status] Running Loan_Approve in mode HTTPS {}
+[debug] [2019-10-18T11:34:27.542Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_15561.sock"}
+[debug] [2019-10-18T11:34:27.543Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_15561.sock"}
+[debug] [2019-10-18T11:34:27.558Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T11:34:27.788Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  { accountNumber: '0049562599',
+[info] >    bankCode: '063',
+[info] >    bank: 'Access Bank (Diamond)',
+[info] >    recipientCode: 'RCP_en5a1xl6aw0qv7y' }
+[info] >  undefined
+[debug] [2019-10-18T11:34:32.936Z] [functions] Finished "Loan_Approve" in ~5s
+[debug] [2019-10-18T11:35:59.422Z] shell:Payment_Collector: trigger={"schedule":{"schedule":"0 11 * * *"},"eventTrigger":{"resource":"projects/shecluded/topics","eventType":"google.pubsub.topic.publish","service":"pubsub.googleapis.com"},"labels":{"deployment-scheduled":"true"},"name":"Payment_Collector","entryPoint":"Payment_Collector"}
+[debug] [2019-10-18T11:35:59.422Z] shell:Payment_Collector: opts={}, data={}
+[debug] [2019-10-18T11:35:59.687Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T11:35:59.688Z] [functions] Beginning execution of "Payment_Collector"
+[debug] [2019-10-18T11:35:59.688Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T11:35:59.690Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T11:35:59.691Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T11:35:59.692Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T11:36:00.053Z] DEBUG: [runtime-status] Trigger "Payment_Collector" has been found, beginning invocation! {}
+[debug] [2019-10-18T11:36:00.053Z] DEBUG: [runtime-status]  {"schedule":{"schedule":"0 11 * * *"},"eventTrigger":{"resource":"projects/shecluded/topics","eventType":"google.pubsub.topic.publish","service":"pubsub.googleapis.com"},"labels":{"deployment-scheduled":"true"},"name":"Payment_Collector","entryPoint":"Payment_Collector"}
+[debug] [2019-10-18T11:36:00.053Z] DEBUG: [runtime-status] Running Payment_Collector in mode BACKGROUND {}
+[debug] [2019-10-18T11:36:00.053Z] DEBUG: [runtime-status] ProcessBackground {"eventId":"2e5b2bad-ae60-489a-9767-aaea65cb0f98","timestamp":"2019-10-18T11:35:59.422Z","eventType":"google.pubsub.topic.publish","data":{}}
+[debug] [2019-10-18T11:36:00.054Z] DEBUG: [runtime-status] RunBackground {"data":{},"context":{"eventId":"2e5b2bad-ae60-489a-9767-aaea65cb0f98","timestamp":"2019-10-18T11:35:59.422Z","eventType":"google.pubsub.topic.publish"}}
+[info] >  Your loan => GRA1VPdRjhl15n4dR4ja is due today M2t5HiCLYHat3iZ2qrB586Fq6rI2
+[info] >  loan amount 249999
+[debug] [2019-10-18T11:36:03.496Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[warn] ⚠  functions: TypeError: Cannot read property 'authorization_code' of undefined
+    at exports.Payment_Collector.functions.pubsub.schedule.onRun (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js:676:52)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+[warn] ⚠  Your function was killed because it raised an unhandled error.
+[debug] [2019-10-18T12:07:15.115Z] Accepted request POST /shecluded/us-central1/Paystack_Verify_Transaction --> Paystack_Verify_Transaction
+[debug] [2019-10-18T12:07:15.393Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T12:07:15.393Z] [functions] Beginning execution of "Paystack_Verify_Transaction"
+[debug] [2019-10-18T12:07:15.393Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T12:07:15.396Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T12:07:15.397Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T12:07:15.398Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T12:07:15.762Z] DEBUG: [runtime-status] Trigger "Paystack_Verify_Transaction" has been found, beginning invocation! {}
+[debug] [2019-10-18T12:07:15.762Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Paystack_Verify_Transaction","entryPoint":"Paystack_Verify_Transaction"}
+[debug] [2019-10-18T12:07:15.762Z] DEBUG: [runtime-status] Running Paystack_Verify_Transaction in mode HTTPS {}
+[debug] [2019-10-18T12:07:15.768Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_15624.sock"}
+[debug] [2019-10-18T12:07:15.769Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_15624.sock"}
+[debug] [2019-10-18T12:07:15.784Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T12:07:15.792Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  { status: true,
+[info] >    message: 'Verification successful',
+[info] >    data:
+[info] >     { id: 302733848,
+[info] >       domain: 'test',
+[info] >       status: 'success',
+[info] >       reference: 'T877779725726831',
+[info] >       amount: 10000,
+[info] >       message: null,
+[info] >       gateway_response: 'Successful',
+[info] >       paid_at: '2019-10-18T11:23:47.000Z',
+[info] >       created_at: '2019-10-18T11:23:42.000Z',
+[info] >       channel: 'card',
+[info] >       currency: 'NGN',
+[info] >       ip_address: '129.56.81.174',
+[info] >       metadata: { referrer: 'https://shecluded.firebaseapp.com/about-you' },
+[info] >       log:
+[info] >        { start_time: 1571397822,
+[info] >          time_spent: 6,
+[info] >          attempts: 1,
+[info] >          errors: 0,
+[info] >          success: true,
+[info] >          mobile: false,
+[info] >          input: [],
+[info] >          history: [Array] },
+[info] >       fees: 150,
+[info] >       fees_split: null,
+[info] >       authorization:
+[info] >        { authorization_code: 'AUTH_et8ep3yip8',
+[info] >          bin: '408408',
+[info] >          last4: '4081',
+[info] >          exp_month: '12',
+[info] >          exp_year: '2020',
+[info] >          channel: 'card',
+[info] >          card_type: 'visa DEBIT',
+[info] >          bank: 'Test Bank',
+[info] >          country_code: 'NG',
+[info] >          brand: 'visa',
+[info] >          reusable: true,
+[info] >          signature: 'SIG_Vfd5pAnajwRCr6ejkIoz' },
+[info] >       customer:
+[info] >        { id: 4928424,
+[info] >          first_name: null,
+[info] >          last_name: null,
+[info] >          email: 'think.senpai@gmail.com',
+[info] >          customer_code: 'CUS_3spk5ebr7wdj3c5',
+[info] >          phone: null,
+[info] >          metadata: null,
+[info] >          risk_action: 'default' },
+[info] >       plan: null,
+[info] >       order_id: null,
+[info] >       paidAt: '2019-10-18T11:23:47.000Z',
+[info] >       createdAt: '2019-10-18T11:23:42.000Z',
+[info] >       transaction_date: '2019-10-18T11:23:42.000Z',
+[info] >       plan_object: {},
+[info] >       subaccount: {} } }
+[info] >  Unhandled error TypeError: Cannot read property 'uid' of undefined
+[info] >      at exports.Paystack_Verify_Transaction.functions.https.onCall (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js:260:72)
+[debug] [2019-10-18T12:07:16.685Z] [functions] Finished "Paystack_Verify_Transaction" in ~1s
+[debug] [2019-10-18T12:11:41.837Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T12:11:43.110Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T12:11:43.110Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T12:11:43.113Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T12:11:43.114Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T12:11:43.115Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T12:11:43.448Z] Accepted request POST /shecluded/us-central1/Paystack_Verify_Transaction --> Paystack_Verify_Transaction
+[debug] [2019-10-18T12:11:43.708Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T12:11:43.709Z] [functions] Beginning execution of "Paystack_Verify_Transaction"
+[debug] [2019-10-18T12:11:43.709Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T12:11:43.712Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T12:11:43.712Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T12:11:43.713Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T12:11:44.073Z] DEBUG: [runtime-status] Trigger "Paystack_Verify_Transaction" has been found, beginning invocation! {}
+[debug] [2019-10-18T12:11:44.073Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Paystack_Verify_Transaction","entryPoint":"Paystack_Verify_Transaction"}
+[debug] [2019-10-18T12:11:44.073Z] DEBUG: [runtime-status] Running Paystack_Verify_Transaction in mode HTTPS {}
+[debug] [2019-10-18T12:11:44.077Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_15640.sock"}
+[debug] [2019-10-18T12:11:44.078Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_15640.sock"}
+[debug] [2019-10-18T12:11:44.093Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T12:11:44.101Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  { status: true,
+[info] >    message: 'Verification successful',
+[info] >    data:
+[info] >     { id: 302733848,
+[info] >       domain: 'test',
+[info] >       status: 'success',
+[info] >       reference: 'T877779725726831',
+[info] >       amount: 10000,
+[info] >       message: null,
+[info] >       gateway_response: 'Successful',
+[info] >       paid_at: '2019-10-18T11:23:47.000Z',
+[info] >       created_at: '2019-10-18T11:23:42.000Z',
+[info] >       channel: 'card',
+[info] >       currency: 'NGN',
+[info] >       ip_address: '129.56.81.174',
+[info] >       metadata: { referrer: 'https://shecluded.firebaseapp.com/about-you' },
+[info] >       log:
+[info] >        { start_time: 1571397822,
+[info] >          time_spent: 6,
+[info] >          attempts: 1,
+[info] >          errors: 0,
+[info] >          success: true,
+[info] >          mobile: false,
+[info] >          input: [],
+[info] >          history: [Array] },
+[info] >       fees: 150,
+[info] >       fees_split: null,
+[info] >       authorization:
+[info] >        { authorization_code: 'AUTH_et8ep3yip8',
+[info] >          bin: '408408',
+[info] >          last4: '4081',
+[info] >          exp_month: '12',
+[info] >          exp_year: '2020',
+[info] >          channel: 'card',
+[info] >          card_type: 'visa DEBIT',
+[info] >          bank: 'Test Bank',
+[info] >          country_code: 'NG',
+[info] >          brand: 'visa',
+[info] >          reusable: true,
+[info] >          signature: 'SIG_Vfd5pAnajwRCr6ejkIoz' },
+[info] >       customer:
+[info] >        { id: 4928424,
+[info] >          first_name: null,
+[info] >          last_name: null,
+[info] >          email: 'think.senpai@gmail.com',
+[info] >          customer_code: 'CUS_3spk5ebr7wdj3c5',
+[info] >          phone: null,
+[info] >          metadata: null,
+[info] >          risk_action: 'default' },
+[info] >       plan: null,
+[info] >       order_id: null,
+[info] >       paidAt: '2019-10-18T11:23:47.000Z',
+[info] >       createdAt: '2019-10-18T11:23:42.000Z',
+[info] >       transaction_date: '2019-10-18T11:23:42.000Z',
+[info] >       plan_object: {},
+[info] >       subaccount: {} } }
+[debug] [2019-10-18T12:11:48.507Z] [functions] Finished "Paystack_Verify_Transaction" in ~4s
+[debug] [2019-10-18T12:12:04.462Z] shell:Payment_Collector: trigger={"schedule":{"schedule":"0 11 * * *"},"eventTrigger":{"resource":"projects/shecluded/topics","eventType":"google.pubsub.topic.publish","service":"pubsub.googleapis.com"},"labels":{"deployment-scheduled":"true"},"name":"Payment_Collector","entryPoint":"Payment_Collector"}
+[debug] [2019-10-18T12:12:04.463Z] shell:Payment_Collector: opts={}, data={}
+[debug] [2019-10-18T12:12:04.725Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T12:12:04.725Z] [functions] Beginning execution of "Payment_Collector"
+[debug] [2019-10-18T12:12:04.725Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T12:12:04.728Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T12:12:04.730Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T12:12:04.730Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T12:12:05.091Z] DEBUG: [runtime-status] Trigger "Payment_Collector" has been found, beginning invocation! {}
+[debug] [2019-10-18T12:12:05.091Z] DEBUG: [runtime-status]  {"schedule":{"schedule":"0 11 * * *"},"eventTrigger":{"resource":"projects/shecluded/topics","eventType":"google.pubsub.topic.publish","service":"pubsub.googleapis.com"},"labels":{"deployment-scheduled":"true"},"name":"Payment_Collector","entryPoint":"Payment_Collector"}
+[debug] [2019-10-18T12:12:05.091Z] DEBUG: [runtime-status] Running Payment_Collector in mode BACKGROUND {}
+[debug] [2019-10-18T12:12:05.091Z] DEBUG: [runtime-status] ProcessBackground {"eventId":"857fd295-6a07-474b-b100-9ae1e1262085","timestamp":"2019-10-18T12:12:04.463Z","eventType":"google.pubsub.topic.publish","data":{}}
+[debug] [2019-10-18T12:12:05.092Z] DEBUG: [runtime-status] RunBackground {"data":{},"context":{"eventId":"857fd295-6a07-474b-b100-9ae1e1262085","timestamp":"2019-10-18T12:12:04.463Z","eventType":"google.pubsub.topic.publish"}}
+[info] >  Your loan => GRA1VPdRjhl15n4dR4ja is due today M2t5HiCLYHat3iZ2qrB586Fq6rI2
+[info] >  loan amount 249999
+[info] >  AUTH_et8ep3yip8
+[info] >  Your loan => osp4g3hyCFICVkx3omHY is due today XLkdlAwTpFUxv7B8YVGB6PYAMMg1
+[info] >  loan amount 909089.99
+[info] >  AUTH_zwqi43lll7
+[info] >  [ { amount: 4614900,
+[info] >      authorization_code: 'AUTH_et8ep3yip8',
+[info] >      email: 'think.senpai@gmail.com' },
+[info] >    { amount: 19665015,
+[info] >      authorization_code: 'AUTH_zwqi43lll7',
+[info] >      email: 'aolfiligre@gmail.com' } ]
+[info] >  { status: true,
+[info] >    message: 'Charge attempted',
+[info] >    data:
+[info] >     { amount: 4614900,
+[info] >       currency: 'NGN',
+[info] >       transaction_date: '2019-10-18T12:12:08.000Z',
+[info] >       status: 'success',
+[info] >       reference: 'btkyflddbjz2idu',
+[info] >       domain: 'test',
+[info] >       metadata: '',
+[info] >       gateway_response: 'Approved',
+[info] >       message: null,
+[info] >       channel: 'card',
+[info] >       ip_address: null,
+[info] >       log: null,
+[info] >       fees: 79224,
+[info] >       authorization:
+[info] >        { authorization_code: 'AUTH_et8ep3yip8',
+[info] >          bin: '408408',
+[info] >          last4: '4081',
+[info] >          exp_month: '12',
+[info] >          exp_year: '2020',
+[info] >          channel: 'card',
+[info] >          card_type: 'visa DEBIT',
+[info] >          bank: 'Test Bank',
+[info] >          country_code: 'NG',
+[info] >          brand: 'visa',
+[info] >          reusable: true,
+[info] >          signature: 'SIG_Vfd5pAnajwRCr6ejkIoz' },
+[info] >       customer:
+[info] >        { id: 4928424,
+[info] >          first_name: null,
+[info] >          last_name: null,
+[info] >          email: 'think.senpai@gmail.com',
+[info] >          customer_code: 'CUS_3spk5ebr7wdj3c5',
+[info] >          phone: null,
+[info] >          metadata: null,
+[info] >          risk_action: 'default' },
+[info] >       plan: 0 } }
+[info] >  { status: true,
+[info] >    message: 'Charge attempted',
+[info] >    data:
+[info] >     { amount: 19665015,
+[info] >       currency: 'NGN',
+[info] >       transaction_date: '2019-10-18T12:12:09.000Z',
+[info] >       status: 'success',
+[info] >       reference: 'k42a8wgxixp7x90',
+[info] >       domain: 'test',
+[info] >       metadata: '',
+[info] >       gateway_response: 'Approved',
+[info] >       message: null,
+[info] >       channel: 'card',
+[info] >       ip_address: null,
+[info] >       log: null,
+[info] >       fees: 200000,
+[info] >       authorization:
+[info] >        { authorization_code: 'AUTH_zwqi43lll7',
+[info] >          bin: '408408',
+[info] >          last4: '4081',
+[info] >          exp_month: '12',
+[info] >          exp_year: '2020',
+[info] >          channel: 'card',
+[info] >          card_type: 'visa DEBIT',
+[info] >          bank: 'Test Bank',
+[info] >          country_code: 'NG',
+[info] >          brand: 'visa',
+[info] >          reusable: true,
+[info] >          signature: 'SIG_Vfd5pAnajwRCr6ejkIoz' },
+[info] >       customer:
+[info] >        { id: 13841463,
+[info] >          first_name: 'Stephen',
+[info] >          last_name: 'King',
+[info] >          email: 'aolfiligre@gmail.com',
+[info] >          customer_code: 'CUS_vliuropt10dfnhy',
+[info] >          phone: '',
+[info] >          metadata: null,
+[info] >          risk_action: 'default' },
+[info] >       plan: 0 } }
+[debug] [2019-10-18T12:12:09.417Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[debug] [2019-10-18T12:12:09.418Z] [functions] Finished "Payment_Collector" in ~4s
+[debug] [2019-10-18T12:19:32.286Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/paystacktest.html changed, reloading triggers
+[debug] [2019-10-18T12:19:33.571Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T12:19:33.572Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T12:19:33.575Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T12:19:33.575Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T12:19:33.576Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T12:21:55.472Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T12:21:56.751Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T12:21:56.751Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T12:21:56.755Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T12:21:56.755Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T12:21:56.756Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:05:44.312Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:05:45.716Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:05:45.716Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:05:45.720Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:05:45.721Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:05:45.722Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:06:12.862Z] Accepted request POST /shecluded/us-central1/Payment_Confirmer --> Payment_Confirmer
+[debug] [2019-10-18T13:06:13.147Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:06:13.148Z] [functions] Beginning execution of "Payment_Confirmer"
+[debug] [2019-10-18T13:06:13.148Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:06:13.150Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:06:13.151Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:06:13.152Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:06:13.525Z] DEBUG: [runtime-status] Trigger "Payment_Confirmer" has been found, beginning invocation! {}
+[debug] [2019-10-18T13:06:13.525Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Payment_Confirmer","entryPoint":"Payment_Confirmer"}
+[debug] [2019-10-18T13:06:13.526Z] DEBUG: [runtime-status] Running Payment_Confirmer in mode HTTPS {}
+[debug] [2019-10-18T13:06:13.532Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16076.sock"}
+[debug] [2019-10-18T13:06:13.533Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16076.sock"}
+[debug] [2019-10-18T13:06:13.554Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T13:06:13.891Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[debug] [2019-10-18T13:06:13.916Z] [functions] Finished "Payment_Confirmer" in ~1s
+[debug] [2019-10-18T13:06:25.109Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:06:26.387Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:06:26.387Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:06:26.391Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:06:26.391Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:06:26.392Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:06:26.819Z] Accepted request POST /shecluded/us-central1/Payment_Confirmer --> Payment_Confirmer
+[debug] [2019-10-18T13:06:27.086Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:06:27.088Z] [functions] Beginning execution of "Payment_Confirmer"
+[debug] [2019-10-18T13:06:27.088Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:06:27.090Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:06:27.091Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:06:27.092Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:06:27.466Z] DEBUG: [runtime-status] Trigger "Payment_Confirmer" has been found, beginning invocation! {}
+[debug] [2019-10-18T13:06:27.466Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Payment_Confirmer","entryPoint":"Payment_Confirmer"}
+[debug] [2019-10-18T13:06:27.466Z] DEBUG: [runtime-status] Running Payment_Confirmer in mode HTTPS {}
+[debug] [2019-10-18T13:06:27.472Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16089.sock"}
+[debug] [2019-10-18T13:06:27.473Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16089.sock"}
+[debug] [2019-10-18T13:06:27.489Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T13:06:27.728Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  we found something
+[debug] [2019-10-18T13:06:30.753Z] [functions] Finished "Payment_Confirmer" in ~3s
+[debug] [2019-10-18T13:09:15.306Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:09:16.607Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:09:16.607Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:09:16.611Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:09:16.612Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:09:16.612Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:09:18.126Z] Accepted request POST /shecluded/us-central1/Payment_Confirmer --> Payment_Confirmer
+[debug] [2019-10-18T13:09:18.388Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:09:18.388Z] [functions] Beginning execution of "Payment_Confirmer"
+[debug] [2019-10-18T13:09:18.389Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:09:18.391Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:09:18.392Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:09:18.393Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:09:18.769Z] DEBUG: [runtime-status] Trigger "Payment_Confirmer" has been found, beginning invocation! {}
+[debug] [2019-10-18T13:09:18.769Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Payment_Confirmer","entryPoint":"Payment_Confirmer"}
+[debug] [2019-10-18T13:09:18.769Z] DEBUG: [runtime-status] Running Payment_Confirmer in mode HTTPS {}
+[debug] [2019-10-18T13:09:18.775Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16103.sock"}
+[debug] [2019-10-18T13:09:18.776Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16103.sock"}
+[debug] [2019-10-18T13:09:18.791Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T13:09:19.037Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  we found something
+[debug] [2019-10-18T13:09:26.103Z] [functions] Finished "Payment_Confirmer" in ~7s
+[debug] [2019-10-18T13:10:36.189Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:10:37.476Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:10:37.476Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:10:37.479Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:10:37.480Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:10:37.480Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:10:39.468Z] Accepted request POST /shecluded/us-central1/Payment_Confirmer --> Payment_Confirmer
+[debug] [2019-10-18T13:10:39.733Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:10:39.733Z] [functions] Beginning execution of "Payment_Confirmer"
+[debug] [2019-10-18T13:10:39.733Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:10:39.736Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:10:39.737Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:10:39.738Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:10:40.116Z] DEBUG: [runtime-status] Trigger "Payment_Confirmer" has been found, beginning invocation! {}
+[debug] [2019-10-18T13:10:40.116Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Payment_Confirmer","entryPoint":"Payment_Confirmer"}
+[debug] [2019-10-18T13:10:40.116Z] DEBUG: [runtime-status] Running Payment_Confirmer in mode HTTPS {}
+[debug] [2019-10-18T13:10:40.123Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16116.sock"}
+[debug] [2019-10-18T13:10:40.123Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16116.sock"}
+[debug] [2019-10-18T13:10:40.138Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T13:10:40.383Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  we found something
+[debug] [2019-10-18T13:10:44.345Z] [functions] Finished "Payment_Confirmer" in ~4s
+[debug] [2019-10-18T13:14:04.492Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:14:05.776Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:14:05.776Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:14:05.779Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:14:05.780Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:14:05.781Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:14:06.687Z] Accepted request POST /shecluded/us-central1/Payment_Confirmer --> Payment_Confirmer
+[debug] [2019-10-18T13:14:06.945Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:14:06.946Z] [functions] Beginning execution of "Payment_Confirmer"
+[debug] [2019-10-18T13:14:06.946Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:14:06.949Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:14:06.950Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:14:06.951Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:14:07.332Z] DEBUG: [runtime-status] Trigger "Payment_Confirmer" has been found, beginning invocation! {}
+[debug] [2019-10-18T13:14:07.332Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Payment_Confirmer","entryPoint":"Payment_Confirmer"}
+[debug] [2019-10-18T13:14:07.333Z] DEBUG: [runtime-status] Running Payment_Confirmer in mode HTTPS {}
+[debug] [2019-10-18T13:14:07.339Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16130.sock"}
+[debug] [2019-10-18T13:14:07.339Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16130.sock"}
+[debug] [2019-10-18T13:14:07.354Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T13:14:07.597Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  we found something
+[debug] [2019-10-18T13:14:10.482Z] [functions] Finished "Payment_Confirmer" in ~3s
+[debug] [2019-10-18T13:15:43.323Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:15:44.603Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:15:44.603Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:15:44.606Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:15:44.607Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:15:44.608Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:16:29.669Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:16:30.935Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:16:30.936Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:16:30.939Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:16:30.939Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:16:30.940Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:16:31.321Z] Accepted request POST /shecluded/us-central1/Payment_Confirmer --> Payment_Confirmer
+[debug] [2019-10-18T13:16:31.587Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:16:31.588Z] [functions] Beginning execution of "Payment_Confirmer"
+[debug] [2019-10-18T13:16:31.588Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:16:31.591Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:16:31.592Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:16:31.592Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:16:31.963Z] DEBUG: [runtime-status] Trigger "Payment_Confirmer" has been found, beginning invocation! {}
+[debug] [2019-10-18T13:16:31.964Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Payment_Confirmer","entryPoint":"Payment_Confirmer"}
+[debug] [2019-10-18T13:16:31.964Z] DEBUG: [runtime-status] Running Payment_Confirmer in mode HTTPS {}
+[debug] [2019-10-18T13:16:31.971Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16163.sock"}
+[debug] [2019-10-18T13:16:31.971Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16163.sock"}
+[debug] [2019-10-18T13:16:31.987Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T13:16:32.241Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  we found something
+[debug] [2019-10-18T13:16:33.955Z] [functions] Finished "Payment_Confirmer" in ~1s
+[debug] [2019-10-18T13:18:12.487Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:18:13.769Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:18:13.769Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:18:13.772Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:18:13.773Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:18:13.774Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:18:14.774Z] Accepted request POST /shecluded/us-central1/Payment_Confirmer --> Payment_Confirmer
+[debug] [2019-10-18T13:18:15.034Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:18:15.035Z] [functions] Beginning execution of "Payment_Confirmer"
+[debug] [2019-10-18T13:18:15.035Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:18:15.038Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:18:15.039Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:18:15.039Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:18:15.416Z] DEBUG: [runtime-status] Trigger "Payment_Confirmer" has been found, beginning invocation! {}
+[debug] [2019-10-18T13:18:15.416Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Payment_Confirmer","entryPoint":"Payment_Confirmer"}
+[debug] [2019-10-18T13:18:15.416Z] DEBUG: [runtime-status] Running Payment_Confirmer in mode HTTPS {}
+[debug] [2019-10-18T13:18:15.424Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16177.sock"}
+[debug] [2019-10-18T13:18:15.425Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16177.sock"}
+[debug] [2019-10-18T13:18:15.439Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T13:18:15.680Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[debug] [2019-10-18T13:18:18.718Z] [functions] Finished "Payment_Confirmer" in ~3s
+[debug] [2019-10-18T13:18:43.578Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:18:44.858Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:18:44.859Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:18:44.862Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:18:44.863Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:18:44.864Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:18:45.446Z] Accepted request POST /shecluded/us-central1/Payment_Confirmer --> Payment_Confirmer
+[debug] [2019-10-18T13:18:45.707Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:18:45.707Z] [functions] Beginning execution of "Payment_Confirmer"
+[debug] [2019-10-18T13:18:45.707Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:18:45.710Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:18:45.711Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:18:45.712Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:18:46.089Z] DEBUG: [runtime-status] Trigger "Payment_Confirmer" has been found, beginning invocation! {}
+[debug] [2019-10-18T13:18:46.089Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Payment_Confirmer","entryPoint":"Payment_Confirmer"}
+[debug] [2019-10-18T13:18:46.089Z] DEBUG: [runtime-status] Running Payment_Confirmer in mode HTTPS {}
+[debug] [2019-10-18T13:18:46.095Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16190.sock"}
+[debug] [2019-10-18T13:18:46.096Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16190.sock"}
+[debug] [2019-10-18T13:18:46.111Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T13:18:46.353Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  No matching documents.
+[debug] [2019-10-18T13:18:48.715Z] [functions] Finished "Payment_Confirmer" in ~2s
+[debug] [2019-10-18T13:38:59.436Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:39:00.838Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:39:00.838Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:39:00.842Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:39:00.843Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:39:00.844Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:39:02.601Z] shell:Payment_Collector: trigger={"schedule":{"schedule":"0 11 * * *"},"eventTrigger":{"resource":"projects/shecluded/topics","eventType":"google.pubsub.topic.publish","service":"pubsub.googleapis.com"},"labels":{"deployment-scheduled":"true"},"name":"Payment_Collector","entryPoint":"Payment_Collector"}
+[debug] [2019-10-18T13:39:02.601Z] shell:Payment_Collector: opts={}, data={}
+[debug] [2019-10-18T13:39:02.867Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:39:02.867Z] [functions] Beginning execution of "Payment_Collector"
+[debug] [2019-10-18T13:39:02.867Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:39:02.870Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:39:02.871Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:39:02.872Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:39:03.257Z] DEBUG: [runtime-status] Trigger "Payment_Collector" has been found, beginning invocation! {}
+[debug] [2019-10-18T13:39:03.257Z] DEBUG: [runtime-status]  {"schedule":{"schedule":"0 11 * * *"},"eventTrigger":{"resource":"projects/shecluded/topics","eventType":"google.pubsub.topic.publish","service":"pubsub.googleapis.com"},"labels":{"deployment-scheduled":"true"},"name":"Payment_Collector","entryPoint":"Payment_Collector"}
+[debug] [2019-10-18T13:39:03.257Z] DEBUG: [runtime-status] Running Payment_Collector in mode BACKGROUND {}
+[debug] [2019-10-18T13:39:03.257Z] DEBUG: [runtime-status] ProcessBackground {"eventId":"37a326df-c8e2-4950-83fc-479bd986b8bf","timestamp":"2019-10-18T13:39:02.601Z","eventType":"google.pubsub.topic.publish","data":{}}
+[debug] [2019-10-18T13:39:03.258Z] DEBUG: [runtime-status] RunBackground {"data":{},"context":{"eventId":"37a326df-c8e2-4950-83fc-479bd986b8bf","timestamp":"2019-10-18T13:39:02.601Z","eventType":"google.pubsub.topic.publish"}}
+[info] >  Your loan => GRA1VPdRjhl15n4dR4ja is due today M2t5HiCLYHat3iZ2qrB586Fq6rI2
+[info] >  loan amount 249999
+[info] >  AUTH_et8ep3yip8
+[info] >  Your loan => osp4g3hyCFICVkx3omHY is due today XLkdlAwTpFUxv7B8YVGB6PYAMMg1
+[info] >  loan amount 909089.99
+[info] >  AUTH_zwqi43lll7
+[info] >  [ { amount: 4614900,
+[info] >      authorization_code: 'AUTH_et8ep3yip8',
+[info] >      email: 'think.senpai@gmail.com' },
+[info] >    { amount: 19665015,
+[info] >      authorization_code: 'AUTH_zwqi43lll7',
+[info] >      email: 'aolfiligre@gmail.com' } ]
+[debug] [2019-10-18T13:39:18.100Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[debug] [2019-10-18T13:39:18.100Z] [functions] Finished "Payment_Collector" in ~14s
+[debug] [2019-10-18T13:40:36.061Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:40:37.351Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:40:37.351Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:40:37.354Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:40:37.355Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:40:37.356Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:40:44.195Z] Accepted request POST /shecluded/us-central1/Payment_Confirmer --> Payment_Confirmer
+[debug] [2019-10-18T13:40:44.472Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:40:44.472Z] [functions] Beginning execution of "Payment_Confirmer"
+[debug] [2019-10-18T13:40:44.472Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:40:44.475Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:40:44.476Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:40:44.477Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:40:44.855Z] DEBUG: [runtime-status] Trigger "Payment_Confirmer" has been found, beginning invocation! {}
+[debug] [2019-10-18T13:40:44.855Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Payment_Confirmer","entryPoint":"Payment_Confirmer"}
+[debug] [2019-10-18T13:40:44.855Z] DEBUG: [runtime-status] Running Payment_Confirmer in mode HTTPS {}
+[debug] [2019-10-18T13:40:44.861Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16289.sock"}
+[debug] [2019-10-18T13:40:44.862Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16289.sock"}
+[debug] [2019-10-18T13:40:44.882Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T13:40:44.889Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  (node:16289) UnhandledPromiseRejectionWarning: Error: Cannot encode value: function toDateString() { [native code] }
+[info] >      at Serializer.encodeValue (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/@google-cloud/firestore/build/src/serializer.js:158:15)
+[info] >      at FieldFilter.toProto (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/@google-cloud/firestore/build/src/reference.js:537:40)
+[info] >      at Query.toProto (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/@google-cloud/firestore/build/src/reference.js:1459:72)
+[info] >      at firestore.initializeIfNeeded.then (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/@google-cloud/firestore/build/src/reference.js:1512:34)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] >  (node:16289) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[info] >  (node:16289) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[debug] [2019-10-18T13:41:40.110Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:41:41.474Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:41:41.475Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:41:41.479Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:41:41.480Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:41:41.481Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js:780
+  })
+   ^
+
+SyntaxError: missing ) after argument list
+    at Module._compile (internal/modules/cjs/loader.js:723:23)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Module.require (internal/modules/cjs/loader.js:692:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at /Users/mac/.npm-global/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:677:33
+    at Generator.next (<anonymous>)
+    at fulfilled (/Users/mac/.npm-global/lib/node_modules/firebase-tools/lib/emulator/functionsEmulatorRuntime.js:4:58)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2019-10-18T13:41:47.880Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:41:49.181Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:41:49.181Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:41:49.185Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:41:49.185Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:41:49.186Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:41:50.790Z] Accepted request POST /shecluded/us-central1/Payment_Confirmer --> Payment_Confirmer
+[debug] [2019-10-18T13:41:51.068Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:41:51.068Z] [functions] Beginning execution of "Payment_Confirmer"
+[debug] [2019-10-18T13:41:51.068Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:41:51.071Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:41:51.072Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:41:51.073Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:41:51.454Z] DEBUG: [runtime-status] Trigger "Payment_Confirmer" has been found, beginning invocation! {}
+[debug] [2019-10-18T13:41:51.454Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Payment_Confirmer","entryPoint":"Payment_Confirmer"}
+[debug] [2019-10-18T13:41:51.455Z] DEBUG: [runtime-status] Running Payment_Confirmer in mode HTTPS {}
+[debug] [2019-10-18T13:41:51.461Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16310.sock"}
+[debug] [2019-10-18T13:41:51.461Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16310.sock"}
+[debug] [2019-10-18T13:41:51.482Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T13:41:51.489Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  (node:16310) UnhandledPromiseRejectionWarning: Error: Cannot encode value: function toDateString() { [native code] }
+[info] >      at Serializer.encodeValue (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/@google-cloud/firestore/build/src/serializer.js:158:15)
+[info] >      at FieldFilter.toProto (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/@google-cloud/firestore/build/src/reference.js:537:40)
+[info] >      at Query.toProto (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/@google-cloud/firestore/build/src/reference.js:1459:72)
+[info] >      at firestore.initializeIfNeeded.then (/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/@google-cloud/firestore/build/src/reference.js:1512:34)
+[info] >      at process._tickCallback (internal/process/next_tick.js:68:7)
+[info] >  (node:16310) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+[info] >  (node:16310) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+[debug] [2019-10-18T13:42:18.545Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:42:19.912Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:42:19.912Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:42:19.916Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:42:19.917Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:42:19.918Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:42:22.653Z] Accepted request POST /shecluded/us-central1/Payment_Confirmer --> Payment_Confirmer
+[debug] [2019-10-18T13:42:22.915Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:42:22.915Z] [functions] Beginning execution of "Payment_Confirmer"
+[debug] [2019-10-18T13:42:22.916Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:42:22.918Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:42:22.919Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:42:22.920Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:42:23.307Z] DEBUG: [runtime-status] Trigger "Payment_Confirmer" has been found, beginning invocation! {}
+[debug] [2019-10-18T13:42:23.307Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Payment_Confirmer","entryPoint":"Payment_Confirmer"}
+[debug] [2019-10-18T13:42:23.307Z] DEBUG: [runtime-status] Running Payment_Confirmer in mode HTTPS {}
+[debug] [2019-10-18T13:42:23.313Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16323.sock"}
+[debug] [2019-10-18T13:42:23.314Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16323.sock"}
+[debug] [2019-10-18T13:42:23.334Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T13:42:23.657Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  No matching documents.
+[debug] [2019-10-18T13:42:26.932Z] [functions] Finished "Payment_Confirmer" in ~3s
+[debug] [2019-10-18T13:43:44.546Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:43:45.828Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:43:45.829Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:43:45.832Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:43:45.833Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:43:45.834Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:43:46.859Z] Accepted request POST /shecluded/us-central1/Payment_Confirmer --> Payment_Confirmer
+[debug] [2019-10-18T13:43:47.133Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:43:47.133Z] [functions] Beginning execution of "Payment_Confirmer"
+[debug] [2019-10-18T13:43:47.134Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:43:47.137Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:43:47.138Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:43:47.138Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:43:47.518Z] DEBUG: [runtime-status] Trigger "Payment_Confirmer" has been found, beginning invocation! {}
+[debug] [2019-10-18T13:43:47.518Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Payment_Confirmer","entryPoint":"Payment_Confirmer"}
+[debug] [2019-10-18T13:43:47.518Z] DEBUG: [runtime-status] Running Payment_Confirmer in mode HTTPS {}
+[debug] [2019-10-18T13:43:47.524Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16336.sock"}
+[debug] [2019-10-18T13:43:47.525Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16336.sock"}
+[debug] [2019-10-18T13:43:47.540Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[debug] [2019-10-18T13:43:47.786Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  No matching documents.
+[debug] [2019-10-18T13:43:49.406Z] [functions] Finished "Payment_Confirmer" in ~1s
+[debug] [2019-10-18T13:45:35.126Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:45:36.404Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:45:36.404Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:45:36.407Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:45:36.408Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:45:36.409Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:45:39.281Z] Accepted request POST /shecluded/us-central1/Payment_Confirmer --> Payment_Confirmer
+[debug] [2019-10-18T13:45:39.553Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:45:39.554Z] [functions] Beginning execution of "Payment_Confirmer"
+[debug] [2019-10-18T13:45:39.554Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:45:39.557Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:45:39.558Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:45:39.558Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:45:39.934Z] DEBUG: [runtime-status] Trigger "Payment_Confirmer" has been found, beginning invocation! {}
+[debug] [2019-10-18T13:45:39.934Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Payment_Confirmer","entryPoint":"Payment_Confirmer"}
+[debug] [2019-10-18T13:45:39.934Z] DEBUG: [runtime-status] Running Payment_Confirmer in mode HTTPS {}
+[debug] [2019-10-18T13:45:39.940Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16349.sock"}
+[debug] [2019-10-18T13:45:39.941Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16349.sock"}
+[debug] [2019-10-18T13:45:39.962Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[info] >  Fri Oct 18 2019
+[debug] [2019-10-18T13:45:40.285Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  { payments:
+[info] >     [ { status: 'success',
+[info] >         email: 'think.senpai@gmail.com',
+[info] >         amount: 46149,
+[info] >         customer_code: 'CUS_3spk5ebr7wdj3c5',
+[info] >         date: [Timestamp],
+[info] >         reference: 'xc8tt9536nfcyv1' },
+[info] >       { date: [Timestamp],
+[info] >         reference: 'z17rl9g5fi0p8sk',
+[info] >         status: 'success',
+[info] >         email: 'aolfiligre@gmail.com',
+[info] >         amount: 196650.15,
+[info] >         customer_code: 'CUS_vliuropt10dfnhy' } ],
+[info] >    loans:
+[info] >     [ { lender: 'think.senpai@gmail.com',
+[info] >         repaymentAmount: 46149,
+[info] >         loanID: 'GRA1VPdRjhl15n4dR4ja' },
+[info] >       { lender: 'aolfiligre@gmail.com',
+[info] >         repaymentAmount: 196650.15,
+[info] >         loanID: 'osp4g3hyCFICVkx3omHY' } ],
+[info] >    date: 'Fri Oct 18 2019' }
+[debug] [2019-10-18T13:45:42.536Z] [functions] Finished "Payment_Confirmer" in ~2s
+[debug] [2019-10-18T13:48:17.172Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T13:48:18.460Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:48:18.461Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:48:18.464Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:48:18.465Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:48:18.465Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:48:20.207Z] Accepted request POST /shecluded/us-central1/Payment_Confirmer --> Payment_Confirmer
+[debug] [2019-10-18T13:48:20.477Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T13:48:20.477Z] [functions] Beginning execution of "Payment_Confirmer"
+[debug] [2019-10-18T13:48:20.478Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T13:48:20.480Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T13:48:20.481Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:48:20.482Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T13:48:20.858Z] DEBUG: [runtime-status] Trigger "Payment_Confirmer" has been found, beginning invocation! {}
+[debug] [2019-10-18T13:48:20.858Z] DEBUG: [runtime-status]  {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"Payment_Confirmer","entryPoint":"Payment_Confirmer"}
+[debug] [2019-10-18T13:48:20.858Z] DEBUG: [runtime-status] Running Payment_Confirmer in mode HTTPS {}
+[debug] [2019-10-18T13:48:20.864Z] {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16362.sock"}
+[debug] [2019-10-18T13:48:20.868Z] DEBUG: [functions] Runtime ready! Sending request! {"socketPath":"/var/folders/46/38zn_6mx3v7fgsjt80rjsjbh0000gn/T/firebase_emulator_invocation_16362.sock"}
+[debug] [2019-10-18T13:48:20.888Z] DEBUG: [runtime-status] Ephemeral server used! {}
+[info] >  Fri Oct 18 2019
+[debug] [2019-10-18T13:48:21.209Z] DEBUG: [runtime-status] Ephemeral server survived. {}
+[info] >  { loans:
+[info] >     [ { lender: 'think.senpai@gmail.com',
+[info] >         repaymentAmount: 46149,
+[info] >         loanID: 'GRA1VPdRjhl15n4dR4ja' },
+[info] >       { lender: 'aolfiligre@gmail.com',
+[info] >         repaymentAmount: 196650.15,
+[info] >         loanID: 'osp4g3hyCFICVkx3omHY' } ],
+[info] >    date: 'Fri Oct 18 2019',
+[info] >    payments:
+[info] >     [ { status: 'success',
+[info] >         email: 'think.senpai@gmail.com',
+[info] >         amount: 46149,
+[info] >         customer_code: 'CUS_3spk5ebr7wdj3c5',
+[info] >         date: [Timestamp],
+[info] >         reference: 'xc8tt9536nfcyv1' },
+[info] >       { email: 'aolfiligre@gmail.com',
+[info] >         amount: 196650.15,
+[info] >         customer_code: 'CUS_vliuropt10dfnhy',
+[info] >         date: [Timestamp],
+[info] >         reference: 'z17rl9g5fi0p8sk',
+[info] >         status: 'success' } ] }
+[debug] [2019-10-18T13:48:24.201Z] [functions] Finished "Payment_Confirmer" in ~3s
+[debug] [2019-10-18T14:31:35.976Z] DEBUG: File /Users/mac/Documents/code/Shecluded/cloud-functions/functions/index.js changed, reloading triggers
+[debug] [2019-10-18T14:31:37.744Z] DEBUG: [runtime-status] Functions runtime initialized. {"cwd":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions","node_version":"10.16.3"}
+[debug] [2019-10-18T14:31:37.746Z] DEBUG: [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-18T14:31:37.753Z] DEBUG: [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.6.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-10-18T14:31:37.755Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-10-18T14:31:37.756Z] DEBUG: [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.2.0","resolution":"/Users/mac/Documents/code/Shecluded/cloud-functions/functions/node_modules/firebase-functions/lib/index.js"}
